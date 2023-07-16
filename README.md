@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://wysb7-2qaaa-aaaag-qcf4a-cai.icp0.io/">
-    <img src = "./src/assets/finalfinallogo.svg" width="1200" height="300">
+    <img src = "./src/assets/Logo.svg" width="1200" height="300">
   </a>
 </p>
 

@@ -13,8 +13,15 @@ const Dashboard = () => {
     const [viewPage, setViewPage] = useState(false);
     const { page_id, view_key } = useParams();
     const navigate = useNavigate();
-    const { Storage, Admin } = useContext(GlobalContext);
+    const { Storage, Admin, PageTitle } = useContext(GlobalContext);
     const isMounted = useRef(false);
+
+    // Page title update
+    useEffect(() => {
+        if(PageTitle.title != false) {
+            document.title = PageTitle.title + " | BreakTheSilence";
+        }
+    }, [PageTitle.title])
 
     useEffect(() => {
         if (!isMounted.current) {

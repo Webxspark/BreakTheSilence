@@ -15,9 +15,9 @@ const Notifications = () => {
                 </div>
             </div>
             <div className="my-2 flex flex-col gap-2">
-                <Alert message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum." type="info" closable />
-                <Alert message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum." type="error" closable />
-                <Alert message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum." type="success" closable />
+                <Alert message="New Updates: Stay informed about the latest developments in the fight against physical abuse." type="info" closable />
+                <Alert message="Apologies for any inconvenience caused. Reach out to our support team for reporting or technical difficulties." type="error" closable />
+                <Alert message="Account Created: Congratulations! Your Break The Silence account has been successfully created" type="success" closable />
             </div>
         </div>
     )

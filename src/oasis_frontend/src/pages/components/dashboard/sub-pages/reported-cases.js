@@ -131,7 +131,7 @@ const ReportedCases = () => {
                         <Table dataSource={dataSource} columns={columns} />
                     </div></>
                         || <div className="flex items-center justify-center h-[70dvh]">
-                            <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} description={'No reported cases yet.'} />
+                            <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} description={<div className='text-gray-400'>No reported cases yet.</div>} />
                         </div>}
                 </>}
         </>

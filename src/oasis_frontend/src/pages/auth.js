@@ -73,7 +73,7 @@ const AuthPage = () => {
     var accountCreation = await oasis_backend.addNewUser(userID, "{}", "[]", otp.toString(), "+91" + phoneNumber);
     var validJSONResp = JSON.parse(accountCreation);
     if (validJSONResp.status != 200) {
-      message.destroy();  
+      message.destroy();
       message.error("Something went wrong!");
       setMessage({
         type: "error",
@@ -183,16 +183,13 @@ const AuthPage = () => {
   return (
     <>
       <div className='grid grid-cols-12 h-screen'>
-        <div className='bg-[#f1f4f9] col-span-5'>
-          <div className='my-12 mx-8'>
+        <div className='bg-[#0e0e0e] col-span-5'>
+          <div className='m-8'>
             <div>
-              <Link to="/"><img className='w-48 h-auto' src={logo} /></Link>
-              <div className='mt-12 mx-2'>
-                <h1 className='text-3xl font-bold text-[#39475A]'>Where Healing Begins <br /><span className='text-[#0E1B2E]'>Justice Prevails</span></h1>
+              <Link to="/"><img className='w-24 h-auto mx-5' src={logo} /></Link>
+              <div className='mt-12 mx-12'>
+                <h1 className='text-3xl font-bold text-white'>Where Healing Begins <br /><span className='text-[#fe570b]'>Justice Prevails</span></h1>
               </div>
-              {/* <div className='mt-6 mx-2'>
-                <p className='text-[#39475A]'>Oasis is an innovative online platform that provides a safe space for victims of abuse to raise their voices and seek justice. Together, we are creating an oasis of support, where every voice matters, every survivor is empowered, and the very cycle of silence is broken.</p>
-              </div> */}
               <div className='mt-12 absolute bottom-10 w-[45%] right-0 left-0'>
                 <img className='w-[90%] h-auto' src={auth1} />
               </div>
@@ -203,20 +200,20 @@ const AuthPage = () => {
           {viewPage == 'screen-1' && <>
             <div className='my-16'>
               <div className='flex flex-col items-center gap-3'>
-                <h1 className='text-2xl font-semibold text-[#0E1B2E]'>Welcome</h1>
-                <p className='text-[#788299]'>Sign In/Create an account to start using Oasis</p>
+                <h1 className='text-3xl font-semibold text-[#fe570b]'>Welcome</h1>
+                <p className='text-white'>Sign In/Create an account to start using BreakTheSilence</p>
               </div>
             </div>
             <div className='mt-8 flex flex-col justify-center items-center'>
-              <form onSubmit={handleScreen1FormSubmit} className='flex w-[80%] flex-col items-center justify-center'>
+              <form autoComplete='off' onSubmit={handleScreen1FormSubmit} className='flex w-[80%] flex-col items-center justify-center'>
                 <div className='flex flex-col w-full items-center'>
                   <div className='w-full '>
-                    <label className='text-[#39475A] font-semibold'>Phone Number</label>
-                    <input onChange={(e) => setPhoneNumber(e.target.value)} name='phone' className='w-full border-[1px] border-[#0E1B2E] focus:outline-none rounded-md px-3 py-2 mt-2' type="tel" placeholder="Enter your phone number" />
+                    <label className='text-white font-semibold'>Phone Number</label>
+                    <input onChange={(e) => setPhoneNumber(e.target.value)} name='phone' className='border-2 rounded-md focus:outline-none bg-[#222222] border-transparent  focus:border-[#333333] px-3 py-2 w-full my-3 text-white' type="tel" placeholder="Enter your phone number" />
                   </div>
                 </div>
                 <div className='my-6 flex justify-end w-full'>
-                  <button className='bg-[#0E1B2E] flex gap-2 items-center text-white text-sm px-8 py-3 rounded-md uppercase'>Next <AiOutlineArrowRight /></button>
+                  <button className='bg-[#fe570b] flex gap-2 items-center text-white text-sm px-8 py-3 rounded-md uppercase'>Next <AiOutlineArrowRight /></button>
                 </div>
               </form>
             </div>
@@ -224,25 +221,25 @@ const AuthPage = () => {
             || viewPage == 'screen-2' && <>
               <div className='my-16'>
                 <div className='flex flex-col items-center gap-3'>
-                  <h1 className='text-2xl font-semibold text-[#0E1B2E]'>Welcome - OTP Verification</h1>
-                  <p className='text-[#788299]'>We’ve sent an OTP to your number via SMS</p>
+                  <h1 className='text-3xl font-semibold text-[#fe570b]'>Welcome - OTP Verification</h1>
+                  <p className='text-white'>We’ve sent an OTP to your number via SMS</p>
                 </div>
               </div>
               <div className='mt-8 flex flex-col justify-center items-center'>
                 <form onSubmit={handleScreen2FormSubmit} className='flex w-[80%] flex-col items-center justify-center'>
                   <div className='flex flex-col w-full items-center'>
                     <div className='w-full '>
-                      <label className='text-[#39475A] font-semibold'>Enter your OTP</label>
+                      <label className='text-white font-semibold'>Enter your OTP</label>
                       <div className='grid grid-cols-4 gap-6 w-[50%]'>
-                        <input id="otp-box" onChange={(e) => { changeFocus(e); }} maxLength={1} className='border-[1px] text-center border-[#0E1B2E] focus:outline-none rounded-md px-3 py-2 mt-2 h-12 w-12 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none' type="number" placeholder="_" />
-                        <input id="otp-box" onChange={(e) => { changeFocus(e); }} maxLength={1} className='border-[1px] text-center border-[#0E1B2E] focus:outline-none rounded-md px-3 py-2 mt-2 h-12 w-12 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none' type="number" placeholder="_" />
-                        <input id="otp-box" onChange={(e) => { changeFocus(e); }} maxLength={1} className='border-[1px] text-center border-[#0E1B2E] focus:outline-none rounded-md px-3 py-2 mt-2 h-12 w-12 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none' type="number" placeholder="_" />
-                        <input id="otp-box" onChange={(e) => { changeFocus(e, false); }} maxLength={1} className='border-[1px] text-center border-[#0E1B2E] focus:outline-none rounded-md px-3 py-2 mt-2 h-12 w-12 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none' type="number" placeholder="_" />
+                        <input id="otp-box" onChange={(e) => { changeFocus(e); }} maxLength={1} className='border-[1px] text-white text-center bg-[#222222] border-[#0E1B2E] focus:outline-none rounded-md px-3 py-2 mt-2 h-12 w-12 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none' type="number" placeholder="_" />
+                        <input id="otp-box" onChange={(e) => { changeFocus(e); }} maxLength={1} className='border-[1px] text-white text-center bg-[#222222] border-[#0E1B2E] focus:outline-none rounded-md px-3 py-2 mt-2 h-12 w-12 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none' type="number" placeholder="_" />
+                        <input id="otp-box" onChange={(e) => { changeFocus(e); }} maxLength={1} className='border-[1px] text-white text-center bg-[#222222] border-[#0E1B2E] focus:outline-none rounded-md px-3 py-2 mt-2 h-12 w-12 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none' type="number" placeholder="_" />
+                        <input id="otp-box" onChange={(e) => { changeFocus(e, false); }} maxLength={1} className='border-[1px] text-white text-center bg-[#222222] border-[#0E1B2E] focus:outline-none rounded-md px-3 py-2 mt-2 h-12 w-12 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none' type="number" placeholder="_" />
                       </div>
                     </div>
                   </div>
                   <div className='my-6 flex justify-end w-full'>
-                    <button id="submit-btn" className='bg-[#0E1B2E] flex gap-2 items-center text-white text-sm px-8 py-3 rounded-md uppercase'>Verify otp <AiOutlineArrowRight /></button>
+                    <button id="submit-btn" className='bg-[#fe570b] flex gap-2 items-center text-white text-sm px-8 py-3 rounded-md uppercase'>Verify otp <AiOutlineArrowRight /></button>
                   </div>
                 </form>
               </div>

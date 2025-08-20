@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import LandingPage from './pages/landing';
-import AuthPage from './pages/auth';
+import AuthPage from './pages/auth ';
 import Dashboard from './pages/dashboard';
 
 function App() {
